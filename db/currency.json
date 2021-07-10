@@ -1,0 +1,61 @@
+[{
+        "Country": "AR",
+        "Currency": "ARS",
+        "Description": "Peso argentino",
+        "Symbol": "AR$"
+    },
+    {
+        "Country": "CL",
+        "Currency": "CLP",
+        "Description": "Peso chileno",
+        "Symbol": "CL$"
+    },
+    {
+        "Country": "UY",
+        "Currency": "UYU",
+        "Description": "Peso uruguayo",
+        "Symbol": "UY$"
+    },
+    {
+        "Country": "BO",
+        "Currency": "BOB",
+        "Description": "Boliviano",
+        "Symbol": "Bs"
+    },
+    {
+        "Country": "PY",
+        "Currency": "PYG",
+        "Description": "Guaraní paraguayo",
+        "Symbol": "₲"
+    },
+    {
+        "Country": "BR",
+        "Currency": "BRL",
+        "Description": "Real brasileño",
+        "Symbol": "R$"
+    },
+    {
+        "Country": "PE",
+        "Currency": "PEN",
+        "Description": "Sol",
+        "Symbol": "S/"
+    },
+    {
+        "Country": "CO",
+        "Currency": "COP",
+        "Description": "Peso colombiano",
+        "Symbol": "CO$"
+    },
+    {
+        "Country": "MX",
+        "Currency": "MXN",
+        "Description": "Peso mexicano",
+        "Symbol": "MX$"
+    },
+    {
+        "Country": "US",
+        "Currency": "USD",
+        "Description": "Dólar estadounidense",
+        "Symbol": "US$"
+    }
+]

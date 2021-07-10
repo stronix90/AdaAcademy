@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One");
+html {
+    scroll-behavior: smooth;
+}
+
+.font-fugas {
+    font-family: 'Fugaz One', Arial, Helvetica, sans-serif;
+}
+
+
+/* DECORACIÓN */
+
+
+/* Linea */
+
+.line {
+    background-color: yellow;
+    text-align: left;
+    margin: 0
+}
+
+
+/* BOTONES */
+
+
+/* Cursos */
+
+.btn-shadow {
+    padding: 1.3rem;
+    margin: .5rem;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-shadow::after {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-shadow:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.15, 1.15);
+    box-shadow: 5px 5px 50px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-shadow:hover::after {
+    opacity: 1;
+}
+
+
+/* Carrito de compras */
+
+.cart-icon {
+    font-size: 2rem;
+    background: rgb(243, 255, 159);
+    background: linear-gradient(180deg, rgba(243, 255, 159, 1) 0%, rgba(224, 255, 0, 1) 100%);
+    padding: 10px;
+    margin-bottom: 0px;
+    width: 4rem;
+    height: 3.5rem;
+    border-radius: 50px 0 0 50px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.cart-icon:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+    box-shadow: 5px 5px 50px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* FONDOS */
+
+.gray_gradient {
+    background: #3b3b3b;
+    background: linear-gradient(0deg, #3b3b3b 0%, rgba(39, 43, 48, 1) 100%);
+    color: rgb(236, 236, 236);
+}
+
+.detailsPage {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}

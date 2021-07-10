@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Ada.Academy</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+
+    <!------- JS CDN ------->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!----------------------------->
+
+
+
+    <!-- VENDOR CSS FILES -->
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Iconos About Section -->
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Iconos Counts Section -->
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Carrousel -->
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- CUSTOM AND TEMPLATE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+            <h1 class="logo me-auto"><a href="#hero">Ada<span>.</span><span class="logo-text-sec">Academy</span></a></h1>
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+                    <li><a class="nav-link" href="#coursesSection">Cursos</a></li>
+
+                    <!-- USUARIO LOGUEADO -->
+
+                    <!-- Perfil -->
+                    <li class="LoggedBox" style="display: none;">
+                        <a class="nav-link user">
+                            <i class="fas fa-user-circle" style="margin-right: 10px;"></i>
+                            <span id="userName"></span>
+                        </a>
+                    </li>
+
+                    <!-- Acceder a panel de administración -->
+                    <li class="AdminBox" style="display: none;"><a class="nav-link" href="./admin.html">Administración</a></li>
+
+
+                    <!-- Desloguear -->
+                    <li class="LoggedBox" style="display: none;"><a href="#" onclick="logout()">Cerrar sesión</a></li>
+
+
+                    <!-- USUARIO DESLOGUEADO -->
+                    <li><a class="nav-link unloggedBox" onclick="showLoginScreen()" href="#">Iniciar sesión</a></li>
+
+                </ul>
+                <select onchange="onChangeCurrency(this)" name="currency" id="selCurrency">
+                </select>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+    <main id="main">
+
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+
+            <div class="container" data-aos="zoom-out" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <h1>Excelencia en capacitación online</h1>
+                        <h2>La academia Ada te brinda todas las herramientas necesarias para afrontar el mundo digital</h2>
+                        <a href="#about" class="btn-get-started scrollto">Comenzar</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- End Hero -->
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="content col-xl-5 d-flex align-items-stretch">
+                        <div class="content">
+                            <h3>Aprender haciendo</h3>
+                            <p>
+                                Clases prácticas, concretas y enfocadas en las habilidades de mayor demanda laboral.
+                            </p>
+                            <a href="#coursesSection" class="about-btn"><span>Vea nuestros cursos</span> <i class="bx bx-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 d-flex align-items-stretch">
+                        <div class="icon-boxes d-flex flex-column justify-content-center">
+                            <div class="row">
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                    <i class="bx bx-code-block "></i>
+                                    <h4>Profesores capacitados y profesionales</h4>
+                                    <p>Tus profesores serán personas líderes reconocidas en sus respectivas industrias.</p>
+                                </div>
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                                    <i class="bx bx-wifi"></i>
+                                    <h4>Conectate desde cualquier sitio</h4>
+                                    <p>Descarga las clases con la app y estudia en cualquier lugar sin conexión.</p>
+                                </div>
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                                    <i class="bx bxs-graduation"></i>
+                                    <h4>Diploma de certificación</h4>
+                                    <p>Tras finalizar el curso con todos los trabajos aprobados, recibirá un diploma que certifica su conocimiento</p>
+                                </div>
+                                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                                    <i class="bx bxs-star"></i>
+                                    <h4>Calidad garantizada</h4>
+                                    <p>Constantemente buscamos formas para mejorar la metodologia de enseñanza. Gracias a ello y a los testimonios de nuestros alumnos, podemos garantizarle </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End .content-->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End About Section -->
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="12689" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Clientes satisfechos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                        <div class="count-box">
+                            <i class="bi bi-journal-richtext"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="6594" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Proyectos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="bi bi-headset"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Horas de cursos disponibles</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                        <div class="count-box">
+                            <i class="bi bi-people"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Comunidades</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Counts Section -->
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients">
+            <div class="container pt-3" data-aos="zoom-in">
+
+                <div class="section-title-left">
+                    <h2>Nuestros clientes</h2>
+                </div>
+                <br>
+                <div class="clients-slider swiper-container">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="assets/img/clients/client-1.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-2.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-3.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-4.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-5.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-6.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-7.svg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="assets/img/clients/client-8.svg" class="img-fluid" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Clients Section -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Testimonios</h2>
+                </div>
+
+                <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="./assets/img/testimonial/img0.jpg" class="testimonial-img" alt="">
+                                    <h3>Julia Meilinger</h3>
+                                    <h4>Diseño UX/UI</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> ¡Estoy muy contenta de haber terminado mi curso de Diseño UX/UI ! Amigarse del error, no como algo malo sino como nuestro mejor aliado. Es una de las enseñanzas
+                                        que me llevo a la hora de diseñar cualquier producto. También e igual de imporante el poder de la empatía a la hora de pensar en una solución para el usuario. Agradezco a mi profesora Natalia Valenzuela y tutora
+                                        Yanara Gallardo por los consejos,enseñanza y ganas con las que nos ayudaron en este aprendizaje. También a Coderhouse por la oportunidad de una beca para seguir ampliando mi conocimiento.
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="./assets/img/testimonial/img1.jpg" class="testimonial-img" alt="">
+                                    <h3>Natalia Bazán</h3>
+                                    <h4>Diseño UX/UI</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Con una alegría ENORME, les dejo mi Proyecto Final del curso de Diseño UX/UI de Coderhouse, el cuál termine con nota 10 y en el primer puesto del Top 10 de alumnos.
+                                        Mi app se llama yendo!, es una aplicación de salidas aseguradas donde te propone elegir hacer 4 actividades y además incluye el servicio de transporte seguro. En yendo! vas a poder sacar entradas para el cine, ir
+                                        a comer, ir a eventos y conocer gente nueva. Espero que les guste!, yo disfruté muchísimo desarrollarla. Link Behance: https://bit.ly/3gzCLsX Link Prototipo funcional: https://bit.ly/2yBrmIg #uxui #coderhouse #uxdesigner
+                                        #ux #ui #graphicdesigner #designart #design
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="./assets/img/testimonial/img2.jpg" class="testimonial-img" alt="">
+                                    <h3>Ignacio Pyke</h3>
+                                    <h4>Marketing Digital</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> La semana pasada finalicé en Coderhouse el curso de Marketing Digital: Publicidad en Redes Sociales Avanzado, en el cual tuve el honor de tener a Malena Martin
+                                        como docente, a quien agradezco profundamente por todos los conocimientos, herramientas y consejos brindados. He adquirido conocimientos teóricos y prácticos que me ayudaron a seguir perfeccionándome en Marketing
+                                        Digital. Además durante el curso renové mis certificaciones de Google para estar a la vanguardia en lo que respecta a la estrategia digital: #GoogleSearch, #GoogleDisplay y #GoogleAnalytics. Agradezco también a
+                                        Julieta L. quien se desempeñó como mi tutora durante todo el curso y a Pilar Ojea Carqueijeda por sus aportes enriquecedores a las clases. #CoderHouse #Nerds4ever #MarketingDigital #PublicidadEnRedes #CertificacionesGoogle
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-wrap">
+                                <div class="testimonial-item">
+                                    <img src="./assets/img/testimonial/img3.jpg" class="testimonial-img" alt="">
+                                    <h3>Santiago Homps</h3>
+                                    <h4>React JS</h4>
+                                    <p>
+                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i> Un paso más hacia el front-end !! Arranqué el 2021 con un 10 en React !!! Gracias Coderhouse por el espacio y Cristian Hourcade por la buena onda y el conocimiento!
+                                        Mención especial para José Luis Friedrich, un maestro del código y gran tutor. También para los compañeros Federico José Tanco y Maximiliano Miño por las colaboraciones. El proyecto Frukost va creciendo! LINK: https://lnkd.in/egMbztj
+                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End testimonial item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Testimonials Section -->
+
+        <!-- ======= Courses Section ======= -->
+        <section id="coursesSection" class="portfolio section-bg-dark">
+            <div id="coursesSectionBG" style="background-image:url(); background-repeat: repeat; background-position: 100% 50%; border-radius: 50px;">
+
+                <div class="container">
+
+                    <div class="portfolio-title">
+                        <h2>Cursos</h2>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 d-flex justify-content-center" style="z-index: 100;">
+                            <ul id="portfolio-flters">
+                                <li data-filter="*" class="filter-active">Todos</li>
+                                <li data-filter=".filter-Programación">Programación</li>
+                                <li data-filter=".filter-Diseño">Diseño</li>
+                                <li data-filter=".filter-Marketing">Marketing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="courses" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Courses Section -->
+
+        <!-- ======= Details Course Section ======= -->
+        <section id="detailsCourseSection" style="display: none;" class="detailsPage pt-5 justify-content-center gray_gradient">
+
+            <div class="my-auto container">
+                <div class="container shadow-lg py-4 mb-2 rounded">
+
+                    <!-- Título -->
+                    <div class="row">
+                        <div class="col-auto"> <img id="courseIco" width="24" height="24" style="display: none;"> </div>
+                        <div class="col-auto">
+                            <h4 id="courseName" class="font-fugas" style="display:inline-block;"></h4>
+                        </div>
+                    </div>
+                    <hr width=80% class="line">
+
+                    <!-- Contenido -->
+                    <div class="row pt-4">
+
+                        <!-- Descripción -->
+                        <div class="col-lg-8">
+                            <p id="courseDescription"></p>
+                        </div>
+
+                        <!-- Datos varios -->
+                        <div class="col-lg-4 p-3 shadow-lg " style="size: 110%;">
+                            <div class="row p-2">
+                                <div>
+                                    Cupos disponibles:
+                                    <span id="courseVacAvailable"></span> /
+                                    <span id="courseVacancies"></span>
+                                </div>
+                            </div>
+                            <div class="row p-2">
+                                <div>Requisitos: <span id="courseConditions"></span></div>
+                            </div>
+                            <div class="row p-2">
+                                <div>Precio: <span class="curr_Simbol"></span><span id="coursePrice" class="price" data-price=""></span></div>
+                            </div>
+                            <div class="row p-2 text-center" id="btn_AddToCart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <a href="#coursesSection">VOLVER</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End Details Course Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3 class="logo me-auto" style="padding: 0;"><a href="index.html">Ada<span>.</span><span class="logo-text-sec">Academy</span></a></h3>
+                        <p>
+                            Ciudad de Buenos Aires <br> Argentina<br><br>
+                            <strong>Teléfono:</strong> +11 2254 9337<br>
+                            <strong>Email:</strong> info@AdaAcademy.com<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Presento</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> & Brian Luna
+                </div>
+            </div>
+            <div class="social-links text-center text-md-end pt-3 pt-md-0">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- SideBar -->
+    <div id="sideCart" class="container-sm">
+        <div class="card">
+            <div class="card-header text-center fw-bold">CARRITO DE COMPRAS</div>
+            <div>
+                <ul id="DOM_Cart_List_Container" class="list-group my-4"></ul>
+            </div>
+
+            <span>
+                <h6>Cursos en el carrito: <span id="coursesCount"></span></h6>
+            </span>
+            <span>
+                <h6>Total a cobrar: <span class="curr_Simbol"></span><span id="totalAmount" class="price" data-price=""></span></h6>
+            </span>
+
+            <a class="btn-get-started text-center" onclick="checkOut_S1()">Finalizar compra </a>
+        </div>
+    </div>
+    <!-- End SideBar -->
+
+    <!-- Botón carrito-->
+    <div class="cartFrame">
+
+        <div class="cartContent">
+
+            <!-- ESTILO DEL BOTÓN -->
+            <a onclick="toggleCart()">
+                <div id="DOM_Cart_Button" class="cart-icon text-center float-right" style=" position: absolute;">
+
+                    <!-- ÍCONO -->
+                    <div>
+                        <i class="fas fa-shopping-cart "></i>
+                    </div>
+
+                    <div id="cart_nItems" class="cartItemCounter"></div>
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Alert personalizado -->
+    <div id="customAlert" style="z-index: 100000; display: none; text-align: center;" class="fixed-bottom alert alert-danger collapse" role="alert">
+        <div class="row">
+            <div class="col">
+                <p class="msg text-center m-0"></p>
+            </div>
+            <div class="col-auto">
+                <button class="btn-alert" onclick="closeAlert()">X</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- MODALES -->
+    <!-- Tipo de inicio -->
+    <div class="modal fade modal-black" id="KYU" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <p style="padding: 20px 0 20px 0 ;">Por favor, Inicie Sesión o Registrese<br>Luego proceda nuevamente con la compra</p>
+                </div>
+
+                <div class="modal-footer align-content-center">
+                    <button class="btn" data-bs-target="#login" data-bs-toggle="modal" data-bs-dismiss="modal">Inicar Sesión</button>
+                    <button class="btn" data-bs-target="#signup" data-bs-toggle="modal" data-bs-dismiss="modal" onclick="ClearForm('frmSignUp')">Registarme</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Registro -->
+    <div class="modal fade modal-black" data-bs-backdrop="static" id="signup" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <form id="frmSignUp">
+                    <div class="modal-body">
+
+
+
+                        <div class="form-group">
+                            <label for="txtName">Nombre</label>
+                            <input type="text" class="form-control" id="txtName">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="txtLastName" class="col-sm-12 col-form-label">Apellido</label>
+                            <input type="text" class="form-control" id="txtLastName">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtEmail" class="col-sm-12 col-form-label">Email</label>
+                            <input type="email" class="form-control" id="txtEmail" placeholder="email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtPhone" class="col-sm-12 col-form-label">Teléfono</label>
+                            <input type="number" maxlength="14" class="form-control" id="txtPhone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtCuil" class="col-sm-12 col-form-label">CUIL</label>
+                            <input type="number" maxlength="11" class="form-control" id="txtCuil">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtDateBirth" class="col-sm-12 col-form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="txtDateBirth">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtState" class="col-sm-12 col-form-label">Provincia</label>
+                            <input type="text" class="form-control" id="txtState">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtCountry" class="col-sm-12 col-form-label">País</label>
+                            <input type="text" class="form-control" id="txtCountry">
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-warning" data-bs-dismiss="modal" onclick="signup(event, 'frmSignUp',true)">Registrarme</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Login -->
+    <div class="modal fade modal-black" data-bs-backdrop="static" id="login" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signup">Iniciar sesión</h5>
+                    <button onclick="ClearForm('frmLogIn')" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="frmLogIn" action="">
+                    <div class="modal-body">
+                        <div class="mb-3 row">
+                            <label for="txtLoginEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" autocomplete="username" class="form-control" id="txtLoginEmail" placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="txtLloginPass" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" autocomplete="current-password" class="form-control" id="txtLloginPass" maxlength="12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-bs-dismiss="modal" onclick="login(event)">Iniciar sesión</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Congrats -->
+    <div class="modal fade bd-example-modal-lg" id="congrats" data-bs-backdrop="static" aria-hidden=" true " tabindex="-1 ">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content ">
+                <div class="modal-header ">
+                    <h5 class="modal-title " id="signup ">Ya estás inscripto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.href='#'"></button>
+                </div>
+
+                <div class="modal-body ">
+                    <span class="msg1 "></span>
+                    <ul class="enrolledCourses ">
+                    </ul>
+                    <div class="msg2 "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center "><i class="bi bi-arrow-up-short "></i></a>
+
+    <!-- VENDOR JS -->
+
+    <!-- Animaciones al scrollear -->
+    <script src="assets/vendor/aos/aos.js "></script>
+
+    <script src="assets/vendor/glightbox/js/glightbox.min.js "></script>
+
+    <!-- Categorias -->
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js "></script>
+
+    <!-- AwesomeIcon -->
+    <script src="https://kit.fontawesome.com/ea1b9abd34.js " crossorigin="anonymous "></script>
+
+    <!-- Conteo -->
+    <script src="assets/vendor/purecounter/purecounter.js "></script>
+
+    <!-- Swiper -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js "></script>
+
+    <!-- Ubicación de IP -->
+    <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/vendor/bootstrapMade/js/main.js "></script>
+
+
+
+    <!-- CUSTOM -->
+    <script src="./assets/js/global.js "></script>
+
+    <script src="./assets/js/index/moduleVar.js"></script>
+
+    <script src="./assets/js/class/classCourse.js "></script>
+    <script src="./assets/js/class/classUser.js "></script>
+
+    <script src="./assets/js/course/courseManager.js"></script>
+    <script src="./assets/js/course/DOM.js"></script>
+
+    <script src="./assets/js/index/login.js "></script>
+
+    <script src="./assets/js/currency/main.js"></script>
+    <script src="./assets/js/currency/DOM.js"></script>
+
+    <script src="./assets/js/cart/moduleVar.js "></script>
+    <script src="./assets/js/cart/cartManager.js"></script>
+    <script src="./assets/js/cart/DOM.js"></script>
+
+    <script src="./assets/js/index/sideCart_show_hide.js "></script>
+
+    <script src="./assets/js/index/init.js"></script>
+
+
+
+</body>
+
+</html>

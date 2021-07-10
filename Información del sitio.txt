@@ -1,0 +1,36 @@
+********** FUNCIONALIDADES ********
+
+* PÁGINA DE ADMINISTRACIÓN *
+- Se puede realizar CRUD de cursos
+- Se puede observar los ingresos
+- Gráficos estadísticos: No desarrollado
+
+
+* CURSOS *
+- La información de los diferentes cursos se carga en el mismo contenedor de manera dinámica
+
+
+* CONVERSIÓN DE MONEDA *
+- Se asegura de usar siempre la conversión del día
+- Al ingresar a la página intenta recuperar la moneda que está guardada en el usuario. Si no está registrado, determina la mejor moneda según el IP
+- Actualización dinamica de todos los precios que haya en la página
+
+
+* ANIMACIONES *
+- Animaciones en las secciones de la web
+- Al eliminar item de carrito se desvanece hacia la derecha
+- Al eliminar el último item del carrito, automaticamente se oculta la barra del carrito
+- Alerts desaparecen automaticamente tras un tiempo
+
+
+* FUNCIONAMIENTO DEL CARRITO *
+- Al agregar un item verifica que haya disponibilidad
+- Al hacer el checkout verifica nuevamente la disponibilidad. Si la hay, descuenta los cupos y suma los ingresos del propietario
+
+
+* PÁGINA DE PERFIL* // NO DESARROLLADO
+- Se puede ver los cursos en los que está inscripto y modificar sus datos
+
+
+* PERMISOS *
+- Solo los usuarios que tiene el valor admin en sus propiedades puede ver y acceder a la página de administración
