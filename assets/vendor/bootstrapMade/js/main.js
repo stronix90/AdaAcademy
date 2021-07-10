@@ -212,7 +212,7 @@
                     el.classList.remove('filter-active');
                 });
                 this.classList.add('filter-active');
-                $("#coursesSectionBG").css("background-image", `url(../../assets/img/${this.textContent}.jpg`)
+                $("#coursesSectionBG").css("background-image", `url(./assets/img/${this.textContent}.jpg`)
 
                 portfolioIsotope.arrange({
                     filter: this.getAttribute('data-filter')
