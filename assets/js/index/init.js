@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     // CARGA DE DATOS
     // --> Carga lo referido da moneda y conversión
-    $.getJSON("./../../../db/currency.json", function(data) {
+    $.getJSON("./db/currency.json", function(data) {
         COUNTRY_CURRENCY = data
         DOM_setCurrencyOptions()
         getExRates().then(getUserCurrency)
