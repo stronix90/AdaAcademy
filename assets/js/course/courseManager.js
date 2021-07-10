@@ -18,8 +18,7 @@ async function getCourses() {
 
 function getCoursesFromDB() {
     return new Promise((resolve) => {
-        let route = window.location.host + "/" + window.location.pathname + "/db/courses.json"
-        $.getJSON(route, data => resolve(data))
+        $.getJSON("/db/courses.json", data => resolve(data))
     })
 }
 
