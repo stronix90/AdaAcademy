@@ -18,7 +18,6 @@ async function getCourses() {
 getCoursesFromDB = async () => {
     const path = require("path");
     const dirName = path.dirname("/db/courses.json");
-    alert(dirName);
 
     try {
         const result = await fetch(dirName);
