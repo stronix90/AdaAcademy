@@ -27,9 +27,8 @@ function DOM_setCourseInfo(id) {
     // Actualiza DOM
     $("#courseName").html(courses[id].name)
     $("#courseDescription").html(courses[id].description)
-    $(".curr_Simbol").html(CURRENCY.Symbol)
     $("#coursePrice").attr("data-price", courses[id].price)
-    $("#coursePrice").html(convCurrency(courses[id].price))
+    $("#coursePrice").html(courses[id].price)
     $("#courseVacAvailable").html(courses[id].vacAvailable)
     $("#courseVacancies").html(courses[id].vacancies)
     $("#courseConditions").html(courses[id].conditions)
