@@ -16,10 +16,12 @@ async function getCourses() {
 // 06/07/2022 Modificado por: B.L
 // Arrow function and fetch was implemented
 getCoursesFromDB = async () => {
-    let route = "../../db/courses.json";
+    const path = require("path");
+    const dirName = path.dirname("/db/courses.json");
+    alert(dirName);
 
     try {
-        const result = await fetch(route);
+        const result = await fetch(dirName);
         return await result.json();
     } catch (error) {
         console.log(`Se ha producido un error: ${error}`);
